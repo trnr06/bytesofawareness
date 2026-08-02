@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+const { title = 'Bytes of Awareness' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Linux, local AI, experiments, tutorials, and AI news." />
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<header>
+			<a href="/">Bytes of Awareness</a>
+
+			<nav>
+				<a href="/">Home</a>
+				<a href="/linux">Linux</a>
+				<a href="/ai">AI</a>
+				<a href="/tutorials">Tutorials</a>
+				<a href="/about">About</a>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer>
+			<p>© 2026 Bytes of Awareness</p>
+		</footer>
+	</body>
+</html>

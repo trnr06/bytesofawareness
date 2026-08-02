@@ -1,0 +1,45 @@
+:root {
+	font-family: system-ui, sans-serif;
+	color: #222;
+	background: #f7f7f7;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background: #222;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	gap: 1.5rem;
+}
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	min-height: 70vh;
+}
+
+footer {
+	padding: 2rem;
+	text-align: center;
+	background: #222;
+	color: white;
+}
