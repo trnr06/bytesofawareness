@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	tagline?: string;
+}
+
+const { title, description, tagline } = Astro.props;
+---
+
+<section class="hero">
+
+	<h1>{title}</h1>
+
+	{tagline && (
+		<p class="tagline">
+			{tagline}
+		</p>
+	)}
+
+	<p class="description">
+		{description}
+	</p>
+
+	<slot />
+
+</section>

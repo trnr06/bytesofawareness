@@ -1,25 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="Bytes of Awareness">
-<section class="hero">
 
-    <h1>Bytes of Awareness</h1>
+	<Hero
+		title="Bytes of Awareness"
+		tagline="Learn. Experiment. Understand."
+		description="Linux, Local AI, Open Source, Tutorials, and practical technology experiments explained with clarity."
+	>
+		<div class="hero-buttons">
+			<a href="/tutorials" class="button primary">Explore Articles</a>
+			<a href="/about" class="button secondary">About</a>
+		</div>
+	</Hero>
 
-    <p class="tagline">
-        Learn. Experiment. Understand.
-    </p>
-
-    <p class="description">
-        Linux, Local AI, Open Source, Tutorials, and practical technology
-        experiments explained with clarity.
-    </p>
-
-    <div class="hero-buttons">
-        <a href="/tutorials" class="button primary">Explore Articles</a>
-        <a href="/about" class="button secondary">About</a>
-    </div>
-
-</section>
 </BaseLayout>
