@@ -148,3 +148,54 @@ footer {
 .content-section p {
 	line-height: 1.7;
 }
+
+.tutorial {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.tutorial-header {
+	margin-bottom: 3rem;
+}
+
+.tutorial-category {
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.tutorial h1 {
+	margin-bottom: 1rem;
+}
+
+.tutorial section {
+	margin-bottom: 3rem;
+}
+
+.tutorial h2 {
+	margin-bottom: 1rem;
+}
+
+.tutorial p {
+	line-height: 1.7;
+}
+
+.tutorial pre {
+	padding: 1rem;
+	background: #222;
+	color: white;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+.tutorial code {
+	font-family: monospace;
+}
+
+.tutorial-link {
+	display: inline-block;
+	margin-top: 1rem;
+	font-weight: bold;
+	text-decoration: none;
+}
