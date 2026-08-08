@@ -132,3 +132,19 @@ footer {
 		grid-template-columns: 1fr;
 	}
 }
+
+
+
+.content-section {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.content-section h2 {
+	margin-bottom: 1rem;
+}
+
+.content-section p {
+	line-height: 1.7;
+}
