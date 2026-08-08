@@ -91,3 +91,38 @@ footer {
 	border: 2px solid #222;
 	color: #222;
 }
+
+.topics {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+}
+
+.topics > h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.topic-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.topic-card {
+	padding: 2rem;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+
+.topic-card h2 {
+	margin-top: 0;
+}
+
+.topic-card a {
+	display: inline-block;
+	margin-top: 1rem;
+	text-decoration: none;
+	font-weight: bold;
+}

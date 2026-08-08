@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import TopicCard from '../components/TopicCard.astro';
 ---
 
 <BaseLayout title="Bytes of Awareness">
@@ -15,5 +16,29 @@ import Hero from '../components/Hero.astro';
 			<a href="/about" class="button secondary">About</a>
 		</div>
 	</Hero>
+
+	<section class="topics">
+	<h2>Explore Topics</h2>
+
+	<div class="topic-grid">
+		<TopicCard
+			title="Linux"
+			description="Learn Linux, command-line tools, system administration, and practical skills."
+			href="/linux"
+		/>
+
+		<TopicCard
+			title="AI"
+			description="Explore local AI, LLMs, automation, and practical experiments."
+			href="/ai"
+		/>
+
+		<TopicCard
+			title="Tutorials"
+			description="Step-by-step guides covering Linux, AI, programming, and technology."
+			href="/tutorials"
+		/>
+	</div>
+	</section>
 
 </BaseLayout>
