@@ -11,31 +11,34 @@ import Hero from '../components/Hero.astro';
 	/>
 
 	<section class="content-section">
-	<h2>Featured Tutorial</h2>
+	<h2>Linux Tutorials</h2>
 
-	<p>
-		Start with the essential Linux commands you'll use when working
-		in the terminal.
-	</p>
+	<div class="tutorial-list">
+		<article class="tutorial-card">
+			<h3>Essential Linux Commands for Beginners</h3>
 
-	<a class="tutorial-link" href="/linux/essential-commands/">
-		Essential Linux Commands for Beginners →
-	</a>
+			<p>
+				Learn the essential commands you'll use again and again
+				while working in the Linux terminal.
+			</p>
+
+			<a class="tutorial-link" href="/linux/essential-commands/">
+				Read Tutorial →
+			</a>
+		</article>
+
+		<article class="tutorial-card">
+			<h3>Linux Files and Directories: A Hands-On Guide</h3>
+
+			<p>
+				Learn how Linux organizes files and directories and practice
+				navigating and managing them from the terminal.
+			</p>
+
+			<a class="tutorial-link" href="/linux/files-and-directories/">
+				Read Tutorial →
+			</a>
+		</article>
+	</div>
 	</section>
-
-	<section class="content-section">
-		<h2>Start Learning Linux</h2>
-
-		<p>
-			Linux is an open-source operating system used on servers,
-			desktops, development environments, and many other devices.
-		</p>
-
-		<p>
-			This section of Bytes of Awareness documents what I learn while
-			working with Linux, from basic commands to practical system
-			administration.
-		</p>
-	</section>
-
 </BaseLayout>
