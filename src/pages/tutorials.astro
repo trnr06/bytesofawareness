@@ -1,13 +1,39 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+
+const tutorials = await getCollection('tutorials');
 ---
 
 <BaseLayout title="Tutorials">
 
-<Hero
-    title="Tutorials"
-    description="Step-by-step guides covering Linux, AI, programming, and technology."
-/>
+	<Hero
+		title="Tutorials"
+		description="Step-by-step guides covering Linux, AI, programming, and technology."
+	/>
+
+	<section class="content-section">
+		<h2>All Tutorials</h2>
+
+		<div class="tutorial-list">
+			{tutorials.map((tutorial) => (
+				<article class="tutorial-card">
+					<p class="tutorial-category">{tutorial.data.category}</p>
+
+					<h3>{tutorial.data.title}</h3>
+
+					<p>{tutorial.data.description}</p>
+
+					<a
+						class="tutorial-link"
+						href={`/tutorials/${tutorial.id}/`}
+					>
+						Read Tutorial →
+					</a>
+				</article>
+			))}
+		</div>
+	</section>
 
 </BaseLayout>
