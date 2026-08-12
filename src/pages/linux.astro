@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+
+const linuxTutorials = (await getCollection('tutorials'))
+	.filter((tutorial) => tutorial.data.category === 'Linux');
 ---
 
 <BaseLayout title="Linux">
@@ -14,31 +18,17 @@ import Hero from '../components/Hero.astro';
 	<h2>Linux Tutorials</h2>
 
 	<div class="tutorial-list">
-		<article class="tutorial-card">
-			<h3>Essential Linux Commands for Beginners</h3>
+		{linuxTutorials.map((tutorial) => (
+			<article class="tutorial-card">
+				<h3>{tutorial.data.title}</h3>
 
-			<p>
-				Learn the essential commands you'll use again and again
-				while working in the Linux terminal.
-			</p>
+				<p>{tutorial.data.description}</p>
 
-			<a class="tutorial-link" href="/tutorials/essential-linux-commands/">
-				Read Tutorial →
-			</a>
-		</article>
-
-		<article class="tutorial-card">
-			<h3>Linux Files and Directories: A Hands-On Guide</h3>
-
-			<p>
-				Learn how Linux organizes files and directories and practice
-				navigating and managing them from the terminal.
-			</p>
-
-			<a class="tutorial-link" href="/tutorials/files-and-directories/">
-				Read Tutorial →
-			</a>
-		</article>
+				<a class="tutorial-link" href={`/tutorials/${tutorial.id}/`}>
+					Read Tutorial →
+				</a>
+			</article>
+		))}
 	</div>
 	</section>
 </BaseLayout>
