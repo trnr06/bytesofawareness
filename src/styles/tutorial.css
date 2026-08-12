@@ -1,0 +1,161 @@
+:root {
+	--font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	--t-text: #1f2933;
+	--t-text-soft: #52606d;
+	--t-accent: #14467f;
+	--t-border: #e4e7eb;
+	--t-surface: #ffffff;
+	--t-ink: #0f172a;
+	--t-radius: 10px;
+}
+
+main {
+	font-family: var(--font-sans);
+	color: var(--t-text);
+	line-height: 1.8;
+}
+
+.content-section {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem 4rem;
+}
+
+.content-section h2 {
+	font-size: 1.75rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.02em;
+}
+
+.tutorial-list {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.tutorial-card {
+	background: var(--t-surface);
+	border: 1px solid var(--t-border);
+	border-left: 4px solid var(--t-accent);
+	border-radius: var(--t-radius);
+	padding: 1.5rem 1.75rem;
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.tutorial-card:hover {
+	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+	transform: translateY(-2px);
+}
+
+.tutorial-card h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+.tutorial-card p {
+	margin: 0;
+	color: var(--t-text-soft);
+	line-height: 1.7;
+}
+
+.tutorial-link {
+	display: inline-block;
+	margin-top: 0.75rem;
+	font-weight: 600;
+	color: var(--t-accent);
+	text-decoration: none;
+}
+
+.tutorial-link:hover {
+	text-decoration: underline;
+}
+
+.tutorial-category {
+	display: inline-block;
+	margin: 0 0 0.75rem;
+	padding: 0.25rem 0.6rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--t-accent);
+	background: #e8f0fb;
+	border-radius: 999px;
+}
+
+.tutorial {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem 4rem;
+	font-size: 1.05rem;
+}
+
+.tutorial-header {
+	margin-bottom: 2.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--t-border);
+}
+
+.tutorial-header h1 {
+	font-size: 2rem;
+	margin: 0.5rem 0;
+	letter-spacing: -0.02em;
+}
+
+.tutorial-header p:last-child {
+	margin: 0;
+	color: var(--t-text-soft);
+	font-size: 1.1rem;
+}
+
+.tutorial h2 {
+	font-size: 1.5rem;
+	margin: 2.5rem 0 1rem;
+	letter-spacing: -0.01em;
+}
+
+.tutorial p {
+	margin: 0 0 1rem;
+}
+
+.tutorial ul,
+.tutorial ol {
+	padding-left: 1.4rem;
+	margin: 0 0 1rem;
+}
+
+.tutorial li {
+	margin-bottom: 0.4rem;
+}
+
+.tutorial pre {
+	background: var(--t-ink);
+	color: #e2e8f0;
+	padding: 1rem 1.25rem;
+	border-radius: 8px;
+	overflow-x: auto;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	white-space: pre;
+	text-align: left;
+}
+
+.tutorial code {
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+}
+
+.tutorial :not(pre) > code {
+	background: #eef2f7;
+	color: #7b1e5a;
+	padding: 0.15em 0.4em;
+	border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+	.content-section,
+	.tutorial {
+		padding: 1.5rem 1.25rem 3rem;
+	}
+}

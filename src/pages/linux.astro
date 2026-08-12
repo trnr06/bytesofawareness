@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import '../styles/tutorial.css';
 
 const linuxTutorials = (await getCollection('tutorials'))
 	.filter((tutorial) => tutorial.data.category === 'Linux');
